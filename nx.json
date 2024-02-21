@@ -17,7 +17,20 @@
         "devTargetName": "dev",
         "startTargetName": "start"
       }
+    },
+    {
+      "plugin": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      }
     }
   ],
-  "nxCloudAccessToken": "MWUyYzFiZDItMzE1OS00YjcxLTk2MDItNDdiMjUxYWViNjMxfHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "MWUyYzFiZDItMzE1OS00YjcxLTk2MDItNDdiMjUxYWViNjMxfHJlYWQtd3JpdGU=",
+  "targetDefaults": {
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["default", "^default"]
+    }
+  }
 }
